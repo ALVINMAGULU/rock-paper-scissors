@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(114, 250, 132);
+}
+.center{
+ display:block;
+ margin:auto;
+ width:50%;
+ text-align: center;
+}
+.heading{
+    color:rgba(35, 4, 49, 0.979)
+}
+.button{
+    width: 150px;
+    height: 70px;
+    margin-top:20%;
+    margin-left:10%;
+    display: inline-block;
+    font-size:27px;
+    border-radius: 15%;
+    border-width: 1px;
+ 
+    
+}
+.computer-choice{
+    color: rgba(77, 14, 224, 0.877);
+    font-size: 20px;
+}
+.computer-score{
+    display: inline-block;
+    
+}
+.score{
+   margin-top: 20%;
+   font-size:20px;
+}
+.player-score{
+  float:right;
+}
+.align{
+    display: inline-block;
+}

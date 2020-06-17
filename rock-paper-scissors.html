@@ -2,105 +2,39 @@
     <head>
         <title>Alvins  rock- paper-scissors game</title>
         <meta charset="UTF-8"/>
-    </head>
+        <link rel="stylesheet" href="rock-paper-scissors.css">
     <body>
-        <script>
-            let computer= 0;
-            let player = 0;
-            
-            function computerPlay(){
-                let items = [" rock"," paper","scissors"];
-                choice = items[Math.floor(Math.random()*3)];
-                return choice;
-                
-            }
-            
-     function playRound(){
-        let Result = window.prompt("rock,paper or scissors","rock");
-            let result = Result.toLocaleLowerCase();
-            let playerSelection = result;
-            let computerSelection = computerPlay();
-    
-            if(computerSelection == " rock"){
-                switch(playerSelection){
-                    case "rock":
-                    console.log("You tie, you both chose  rock" )
-                    break;
-                    case "paper":
-                    console.log("You win,  paper  covers  rock")
-                    player++;
-                    break;
-                    case "scissors":
-                    console.log("You loose, rock bangs scissors")
-                    computer++;
-                    break;
-                    default:
-                    console.log("Error choice")
-                    break;
-                    computer++;
-                }
+        <style src="rock-paper-scissors.css"></style>
+     <div class="center">
+      <h2 class = "heading">
+          ROCK PAPER SCISSORS
+      <h2>
 
-            }
-            else if(computerSelection == " paper"){
-                switch(playerSelection){
-                    case "rock":
-                     console.log("You lose,  paper covers  rock")
-                     computer++
-                    break;
-                    case"paper" :
-                     console.log("You tie, you both chose  paper")
-                    break;
-                    case "scissors":
-                      console.log("You won, scissors cut  paper")
-                      player++
-                     break;
-                     default:
-                    console.log("Error choice")
-                    break;
-                    computer++;
-                }
-            }
-            else if(computerSelection == "scissors"){
-                switch(playerSelection){
-                    case "rock":
-                     console.log("You win, rock bangs scizzors")
-                     player++
-                    break;
-                    case"paper" :
-                     console.log("You lose, scissors cut  paper")
-                     computer++
-                    break;
-                    case "scissors":
-                      console.log("You tie you both chose scissors")
-                      break;
-                      default:
-                      console.log("Error input")
-                      computer++
-                      break;
-                }
-            }
-            
-             
-         
-        }
-        function game(){
-            
-        playRound(); 
-        playRound();
-        playRound();
-        playRound();
-        playRound();
-        if(computer>player){
-            console.log("Computer wins");
-        }
-        else if(computer == player){
-            console.log("Draw");
-        }
-        else if(player>computer){
-         console.log("Congs you have won")
-        }
-        }
-        game();
-        </script>
+      <div  >
+        <button class="button" id="rock">ROCK</button>
+        <button class="button" id= "paper">PAPER</button>
+        <button class="button" id= "scissors">SCISSORS</button>
+       </div>
+
+     </div>
+
+    <div id ="youwon" class="center computer-choice">
+     <div class="computer-score">Computer choice:</div>
+     <p class="computer-score" id ="computerChoice"></p>
+    </div>
+
+    <div class="score">
+        <div class="bottom align">
+         <div class="computer-score">Computer score:</div>
+         <div class="computer-score" id="computerScore">0</div>
+        </div>
+        <div class="bottom player-score align" >
+         <div class="align" >Player score:</div>
+         <div class=" align" id="playerScore">0</div>
+        </div>
+    </div>
+        <script src = "rock-paper-scissors.js">  </script>
+       
+    </head>
     </body>
 </html>
